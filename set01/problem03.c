@@ -3,8 +3,14 @@
 int input();
 int add(int a ,int b);
 void output(int a, int b, int sum);
-
-
+int main(){
+  int a,b,sum;
+  a=input();
+  b=input();
+  sum=add(a,b);
+  output(a,b,sum);
+  return 0;
+}
 int input(){
   int n;
   printf("Enter Number: \n");
@@ -12,18 +18,10 @@ int input(){
     return n;
   }
 int add(int a, int b, int sum){
-  printf("The sum of %d and %d is %d",a,b,sum);
+  sum=a+b;
 }
-int main(){
-  int a,b,sum;
-  a=input();
-  b=input();
-  sum=add(a,b);
-  output()
-  return 0;
+void output(int a, int b, int sum){
+  printf("the sum is %d",sum)
 }
- 
-{
-  printf("Wrong Input");
-  
-}
+
+

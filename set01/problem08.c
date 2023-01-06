@@ -1,21 +1,45 @@
 #include <stdio.h>
+int input_array_size();
+void input_array(int n, int a[n]);
+int sum_n_array(int n, int a[n]);
+void output(int n, int a[n], int sum);
 
-int main()
-{
-    int n, I;
-    float num, sum = 0.0;
-
-    print("Enter the number of elements: ");
-    scanf("%d", &n);
-
-    for(i=0; i<n; ++i)
-    {
-        printf("Enter Number%d: ",i+1);
-        scanf("%f", &num);
-
-        sum += num;
-    }
-
-    printf("Sum = %.2f", sum);
-    return 0;
+int main(){
+  int n;
+  n=input_array_size();
+  int a[n];
+  input_array(n,a);
+  int sum;
+  sum=sum_n_array(n,a);
+  output(n,a,sum);
+  return 0;
 }
+
+int input_array_size(){
+  int n;
+  printf("Enter size of array:\n");
+  scanf("%d",&n);
+  return n;
+  
+}
+void input_array(int n, int a[n]){
+  for(int i=0; i<n; i++){
+    printf("Enter array element\n");
+    scanf("%d",&a[i]);
+  }
+}
+
+int sum_n_array(int n, int a[n]){
+  int sum=0;
+  for (int i=0; i<n; i++){
+    sum+=a[i];
+  }
+  return sum;
+}
+void output(int n, int a[n], int sum){
+  printf("the sum of");
+  for(int i=0; i<n-1; i++){
+    printf("%d+",a[i]);
+  }
+  printf("%d= %d",a[n-1],sum);
+} 

@@ -21,6 +21,7 @@ void output(int a, int b, int sum);
 ***Input***
 
 ```
+
 1
 2
 ```
@@ -52,8 +53,10 @@ void output(int a, int b, int sum);
 
 ***Output***
 
-```
-The sum of 1 and 2 is 3
++```
+The sum of
++
+1 and 2 is 3
 ```
 
 ---

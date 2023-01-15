@@ -10,7 +10,7 @@ int main()
    gets(str1);
  
    printf("Enter second string: ");
-   gets(str2);
+   gets(str2); 
  
    for(i = 0; str1[i] != '\0'; i++);
    for(j = 0; str2[j] != '\0'; j++, i++)
@@ -34,7 +34,7 @@ int main()
       printf("Strings are not same");
    }
    else
-   {
+   {  
       printf("Strings are same");
    }
  

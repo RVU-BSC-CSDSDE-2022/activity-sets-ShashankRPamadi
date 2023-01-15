@@ -1,7 +1,7 @@
 #include<stdio.h>
 struct complex {
 	int real,img;
-};
+}
 typedef struct complex Complex;
 
 int get_n();

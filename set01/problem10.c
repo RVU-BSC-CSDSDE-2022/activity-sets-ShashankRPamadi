@@ -1,42 +1,28 @@
 #include<stdio.h>
-#include<string.h> 
- 
-int main()
-{
-   char str1[100], str2[100];
-   int i, j, flag = 0;
- 
-   printf("Enter first string: ");
-   gets(str1);
- 
-   printf("Enter second string: ");
-   gets(str2); 
- 
-   for(i = 0; str1[i] != '\0'; i++);
-   for(j = 0; str2[j] != '\0'; j++, i++)
-   {
-      str1[i] = str2[j];
-   }
-   str1[i] = '\0';
-   printf("After concatenation: %s", str1);
- 
-   for(i = 0; str1[i] != '\0'; i++)
-   {
-      if(str1[i] != str2[i])
-      {
-         flag = 1;
-         break;
-      }
-   }
- 
-   if(flag == 1)
-   {
-      printf("Strings are not same");
-   }
-   else
-   {  
-      printf("Strings are same");
-   }
- 
-   return 0;
+#include<string.h>
+void input_two_strings(char *string1, char *string2);
+int stringcompare(char *string1, char *string2);
+void output(char *string1, char *string2, int result);
+int main(){
+  char string1[10];char string2[10];
+  int result;
+  input_two_strings( string1,string2);
+  result = stringcompare(string1,string2);
+  output(string1,string2,result);
 }
+void input_two_strings(char *string1, char *string2){
+  printf("enter a string\n");
+  scanf("%s",string1);
+  printf("enter a string\n");
+  scanf("%s",string2);
+}
+int stringcompare(char *string1, char *string2){
+  int i,result;
+       result=strcmp(string1,string2);
+  if (result==0){
+    printf("they are equal");}
+  
+  else{printf("they are not equal");}
+}
+void output(char *string1, char *string2, int result){
+   printf("%d",strcmp(string1,string2));}

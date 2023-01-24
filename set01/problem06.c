@@ -1,30 +1,33 @@
-#include <stdio.h> 
-
-// Function to compare three numbers 
-void compare(int *a, int *b, int *c) 
-{ 
-	// Comparing the three numbers 
-	if (*a > *b && *a > *c) 
-		printf("%d is the largest number.", *a); 
-	else if (*b > *a && *b > *c) 
-		printf("%d is the largest number.", *b); 
-	else
-		printf("%d is the largest number.", *c); 
-} 
-
-int main() 
-{ 
-	// Declare three numbers 
-	int a, b, c; 
-	
-	// Ask user to input three numbers 
-	printf("Enter three numbers: "); 
-	scanf("%d%d%d", &a, &b, &c); 
-	
-	// Function call to compare the three numbers 
-	compare(&a, &b, &c); 
-	
-	return 0; 
+#include<stdio.h>
+int input();
+void compare(int a, int b, int c, int *largest);
+void output(int a, int b, int c, int largest);
+int main(){
+  int a = input();
+  int b = input();
+  int c = input();
+  int largest;
+  compare(a,b,c,&largest);
+  output(a,b,c,largest);
+  return 0;
 }
-
-
+int input(){
+int n;
+  printf("enter a number");
+  scanf("%d",&n);
+  return n;
+  }
+void compare(int a, int b, int c, int *largest){
+ if  (a>b && a>c){
+    *largest=a;
+  }
+  if (b>c && b>a){
+    *largest=b;
+  }
+  else{
+    *largest=c;
+  }
+}
+void output(int a, int b, int c, int largest){
+  printf("the largest is %d",largest);
+}
